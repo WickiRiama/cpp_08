@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:15:14 by mriant            #+#    #+#             */
-/*   Updated: 2023/01/19 15:58:55 by mriant           ###   ########.fr       */
+/*   Updated: 2023/01/20 10:33:38 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ public:
 		this->_array.insert(first, last);
 	}
 
-	class FullSpanException : std::exception
+	class FullSpanException : public std::exception
 	{
 	public:
 		virtual const char *what() const throw()
@@ -54,7 +54,7 @@ public:
 			return "The span is full";
 		}
 	};
-	class SpanTooShortException : std::exception
+	class SpanTooShortException : public std::exception
 	{
 	public:
 		virtual const char *what() const throw()
