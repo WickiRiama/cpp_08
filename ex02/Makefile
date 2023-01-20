@@ -6,15 +6,14 @@
 #    By: mriant <mriant@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 10:29:46 by mriant            #+#    #+#              #
-#    Updated: 2023/01/20 10:29:48 by mriant           ###   ########.fr        #
+#    Updated: 2023/01/20 13:09:22 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = mutant
 
 SRCS = ${addprefix srcs/, \
-		 main.cpp \
-		 Span.cpp}
+		 main.cpp}
 
 OBJS = ${SRCS:srcs/%.cpp=build/%.o}
 DEPS = ${OBJS:%.o=%.d}
