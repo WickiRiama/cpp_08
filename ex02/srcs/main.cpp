@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 12:01:45 by mriant            #+#    #+#             */
-/*   Updated: 2023/01/20 16:16:36 by mriant           ###   ########.fr       */
+/*   Updated: 2023/01/23 10:54:01 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,18 @@ int main()
 		mstack.push(737);
 		mstack.push(0);
 		testStack(mstack);
+
+		std::cout << CYN << "Copy Constructor" << RES << std::endl;
+		std::cout << std::endl;
+		MutantStack<int> mstack2(mstack);
+		testStack(mstack2);
+
+		std::cout << CYN << "Assignment" << RES << std::endl;
+		std::cout << std::endl;
+		MutantStack<int> mstack3;
+		mstack3 = mstack;
+		testStack(mstack3);
+
 	}
 	std::cout << CYN << "String" << RES << std::endl;
 	std::cout << std::endl;
